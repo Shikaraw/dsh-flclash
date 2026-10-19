@@ -1,0 +1,6 @@
+* text=auto
+*.exe binary
+*.dat binary
+*.mmdb binary
+*.metadb binary
+*.png binary

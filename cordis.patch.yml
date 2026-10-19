@@ -1,0 +1,11 @@
+# FLClash for DSH — a DSH-only proxy bundle.
+# Only the DSH process is routed; no system proxy and no TUN.
+- insert:
+    - id: flclash-proxy
+      name: '@local/dsh-flclash'
+      config:
+        autoStart: true
+        takeOverDsh: true
+        mixedPort: 17890
+        controllerPort: 17891
+        delayTestUrl: 'https://www.gstatic.com/generate_204'

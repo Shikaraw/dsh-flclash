@@ -1,0 +1,39 @@
+{
+  "name": "@local/dsh-flclash",
+  "version": "1.1.4",
+  "private": true,
+  "type": "module",
+  "description": "FLClash for DSH: a DSH-only mihomo proxy with a floating ball, profiles, node selection and latency tests.",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.png"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "host/*.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.png",
+    "bin/mihomo.exe",
+    "data/*",
+    "vendor/*",
+    "README.md",
+    "THIRD-PARTY-NOTICES.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
+    }
+  }
+}
